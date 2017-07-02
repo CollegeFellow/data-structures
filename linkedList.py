@@ -40,12 +40,29 @@ class LinkedList:
 			last = last.next
 		last.next = new_node
 
+	def deleteNode(self, key):
+		if self.head is not None:
+			if(self.head.data == key):
+				self.head = self.head.next
+				return
+
+		temp = self.head
+		prev = None
+		while(temp):
+			if(temp.data == key):
+				prev.next = temp.next
+				temp.next = None
+				break
+			prev = temp
+			temp = temp.next
+
 	def printList(self):
 		temp = self.head
 
 		while(temp):
-			print(temp.data)
+			print(temp.data,end=' ')
 			temp = temp.next
+		print()
 
 if __name__ == '__main__':
 	llist = LinkedList()
@@ -71,4 +88,12 @@ if __name__ == '__main__':
 	print("Insert 8 after 7")
 	llist.insertAfter(llist.head.next, 8)
 
+	print("List status:")
 	llist.printList()
+
+	print("Delete 8")
+	llist.deleteNode(8)
+
+	print("List status:")
+	llist.printList()
+
