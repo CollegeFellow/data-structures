@@ -56,6 +56,27 @@ class LinkedList:
 			prev = temp
 			temp = temp.next
 
+	# Delete a node at given position
+	def deleteNodeAt(self, position):
+		if self.head is None:
+			return
+
+		# If the first element is to be deleted
+		if(position == 0):
+			self.head = self.head.next
+			return
+
+		temp = self.head
+		index = 0
+		while(temp):
+			if(position == index):
+				prev.next = temp.next
+				temp.next = None
+				break
+			prev = temp
+			temp = temp.next
+			index += 1
+
 	def printList(self):
 		temp = self.head
 
@@ -93,6 +114,12 @@ if __name__ == '__main__':
 
 	print("Delete 8")
 	llist.deleteNode(8)
+
+	print("List status:")
+	llist.printList()
+
+	print("Delete node at position 1")
+	llist.deleteNodeAt(1)
 
 	print("List status:")
 	llist.printList()
