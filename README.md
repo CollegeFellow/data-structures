@@ -7,3 +7,4 @@ Data structures - Implementation using Python.
 * [Level Order Traversal](https://github.com/CollegeFellow/data-structures/blob/master/level-order-tree-traversal.py)
 * [Level Order Traversal - Line by line](https://github.com/CollegeFellow/data-structures/blob/master/level-order-line-by-line.py)
 * [Binary Tree Traversal - Inorder, Preorder & Postorder](https://github.com/CollegeFellow/data-structures/blob/master/tree-traversals-inorder-preorder-and-postorder.py)
+* [Inorder Tree Traversal Without Recursion](https://github.com/CollegeFellow/data-structures/blob/master/inorder-tree-traversal-without-recursion.py)
